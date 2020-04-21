@@ -14,8 +14,10 @@ label {
 
 textarea {
   font-family: 'Source Sans Pro', san-serif;
-  border-bottom: solid;
   background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: solid;
   padding: 20px 20px 0px;
   margin: 20px 0 20px;
   width: 100%;
