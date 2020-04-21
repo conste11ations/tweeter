@@ -4,18 +4,19 @@ header {
   position: absolute;
   background-color: peachpuff;
 }
-header .centered-element {
-  height: relative;
-  width: relative;
+
+.centered-element {
   position: relative;
-  left: 50%;
-  top: 50%;
-  margin-left: -100px;
-  margin-top: -130px;
-  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 120px;
 }
 
 header .name-box {
-  margin-top: -40px;
+  font-family: 'Bungee Shade', sans-serif;
+  text-align: center;
   padding: 0px;
+  margin-top: -20px;
 }

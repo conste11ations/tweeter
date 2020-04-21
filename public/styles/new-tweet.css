@@ -1,0 +1,51 @@
+.new-tweet {
+  display: block;
+ font-family: 'Bungee', san-serif;
+}
+
+.new-tweet h2 {
+  font-family: 'Bungee Shade', san-serif;
+}
+
+label {
+  margin: auto;
+  position: absolute;
+}
+
+textarea {
+  font-family: 'Source Sans Pro', san-serif;
+  border-bottom: solid;
+  background: transparent;
+  padding: 20px 20px 0px;
+  margin: 20px 0 20px;
+  width: 100%;
+}
+
+button {
+  float: left;
+  padding: 10px 25px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4056A1;
+  border: black;
+  border-radius: 15px;
+
+}
+
+button:hover {background-color: darkblue}
+
+button:active {
+  background-color: #3e8e41;
+  transform: translateY(4px);
+}
+
+output {
+  float: right;
+  margin: 10px 20px 20px;
+}
