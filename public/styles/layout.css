@@ -5,7 +5,10 @@
  */
 html {
   box-sizing: border-box;
+  background-image: url(http://www.transparenttextures.com/patterns/brick-wall.png);
+  background-color: papayawhip;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
   font-family: 'Bungee Shade', sans-serif;
@@ -14,14 +17,21 @@ html {
 /*
  * Global layout stuff
  */
-
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
-
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+main {
+  margin-top: 500px;
+  position: relative;
+  float: left;
+  left: 5%; 
+  width: 90%;
+  text-align: center;
+  border: solid;
+ }

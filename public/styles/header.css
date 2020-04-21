@@ -1,0 +1,21 @@
+header {
+  height: 500px;
+  width: 100%;
+  position: absolute;
+  background-color: peachpuff;
+}
+header .centered-element {
+  height: relative;
+  width: relative;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  margin-left: -100px;
+  margin-top: -130px;
+  padding-bottom: 10px;
+}
+
+header .name-box {
+  margin-top: -40px;
+  padding: 0px;
+}
