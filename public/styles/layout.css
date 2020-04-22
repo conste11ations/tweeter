@@ -26,11 +26,10 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 main {
-  margin-top: 500px;
+  margin-top: 520px;
   position: relative;
   float: left;
   left: 5%; 
   width: 90%;
   text-align: center;
-  padding: 0px 30px;
  }

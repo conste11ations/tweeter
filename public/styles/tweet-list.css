@@ -1,0 +1,16 @@
+article {
+  border: solid;
+  margin-top: 40px;
+  padding: 30px;
+
+}
+
+article:hover {
+  box-shadow: 10px 10px grey;
+  font-weight: bold;
+}
+
+article > header {
+  background-color: yellow;
+  height: 40px;
+}

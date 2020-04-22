@@ -1,10 +1,10 @@
-.new-tweet {
+section {
   display: block;
  font-family: 'Bungee', san-serif;
+ margin-top: 20px;
 }
 
-.new-tweet h2 {
-  padding: 20px;
+section h2 {
   font-family: 'Bungee Shade', san-serif;
 }
 
@@ -20,15 +20,14 @@ textarea {
   border: none;
   border-bottom: solid;
   padding: 20px 20px 0px;
-  margin: 20px 0 20px;
+  margin: 20px 0px 20px;
   width: 100%;
+  white-space: pre-wrap;
 }
 
 button {
   float: left;
   padding: 10px 25px;
-  margin-bottom: 20px;
-  overflow: hidden;
   font-size: 24px;
   cursor: pointer;
   text-align: center;
@@ -50,5 +49,9 @@ button:active {
 
 output {
   float: right;
-  margin: 10px 20px 20px;
+  padding: 10px 20px 20px;
+}
+
+footer {
+  height: 40px;
 }
