@@ -48,9 +48,9 @@
   <main class="container">
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form action="/tweets" method="POST">
+      <form id="submitNewTweet" action="/tweets" method="POST">
         <label for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text"></textarea>
+        <textarea name="text" id="new-tweet-text"></textarea>
         <footer>
         <button type="submit">Tweet</button>
         <output name="counter" class="counter" for="tweet-text">140</output>
@@ -58,11 +58,6 @@
       </form>
     </section>
     <section class="tweet-list">
-      <article class="tweet">
-        <header>This is the header area</header>
-          <textarea name="text" id="tweet-text" disabled="disabled">This is a sample placeholder tweet</textarea>
-          <footer>This is the footer area</footer>
-      </article>
     </section>
   </main>
   <script src="/scripts/composer-char-counter.js"></script>
