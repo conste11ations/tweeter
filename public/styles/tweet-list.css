@@ -12,6 +12,21 @@ article:hover {
 }
 
 article > header {
-  background-color: yellow;
-  height: 40px;
+  height: 70px;
+}
+
+header > img {
+  float: left;
+}
+
+header > h3 {
+  float: right;
+  color: silver;
+  margin-top: 20px;
+}
+
+header > h4 {
+  margin-top: 20px;
+  margin-left: 20px;
+  float: left;
 }

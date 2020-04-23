@@ -16,7 +16,7 @@ $(document).ready(function () {
 
     const $articleTweet = $(`<article class="tweet"></article>`);
     const $avatar = $(`<img name="image" alt="No image loaded" src="${tweetData.user.avatars}"></img>`);
-    const $headerSection = $(`<header>${$avatar[0].outerHTML} ${tweetData.user.name} ${tweetData.user.handle}</header>`);
+    const $headerSection = $(`<header>${$avatar[0].outerHTML} <h4>${tweetData.user.name}</h4> <h3>${tweetData.user.handle}</h3></header>`);
     // text() helps us get rid of XSS
     const $tweetString = $('<textarea name="text" id="tweet-text" disabled="disabled">').text(`${tweetData.content.text}`);
     const $footerSection = $(`<footer>${$dateString}</footer>`);
