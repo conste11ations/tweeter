@@ -43,10 +43,10 @@ $(document).ready(function () {
     $('div.error-message').remove();
 
     if ($('textarea#new-tweet-text').val().length > 140) {
-      $errorMessage = "Your tweet is too long!";
+      $errorMessage = "🚧 Your tweet is too long! 🚧 ";
     }
     if ($('textarea#new-tweet-text').val().length === 0) {
-      $errorMessage = "You've submitted an empty tweet!";
+      $errorMessage = "🚧 You've submitted an empty tweet! 🚧 ";
     }
 
     if ($errorMessage) {
