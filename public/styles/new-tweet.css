@@ -55,3 +55,12 @@ output {
 footer {
   height: 40px;
 }
+
+.error-message {
+  border: 5px solid red;
+  font-family: 'Bungee', san-serif;
+  color: red;
+  text-align: center;
+  height: auto;
+  display: none;
+}

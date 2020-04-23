@@ -38,12 +38,24 @@ $(document).ready(function () {
 
   // const postTweetListener = (tweet) => {
   $("form").submit(function (event) {
+    let $errorMessage = "";
     event.preventDefault();
+    $('div.error-message').remove();
+
     if ($('textarea#new-tweet-text').val().length > 140) {
-      alert('Your tweet is too long!');
-    } else if ($('textarea#new-tweet-text').val().length === 0) {
-      alert('This is an empty tweet!');
+      $errorMessage = "Your tweet is too long!";
+    }
+    if ($('textarea#new-tweet-text').val().length === 0) {
+      $errorMessage = "You've submitted an empty tweet!";
+    }
+
+    if ($errorMessage) {
+      $('main.container').prepend(`<div class="error-message">${$errorMessage}</div>`);
+      $('div.error-message').slideDown("slow", function () {
+      });
     } else {
+      $('div.error-message').slideUp("slow", function () {
+      });
       $.ajax({
         url: `/tweets`,
         type: "POST",
