@@ -30,3 +30,8 @@ header > h4 {
   margin-left: 20px;
   float: left;
 }
+
+footer > div > img {
+  height: 30px;
+  width: 30px;
+}

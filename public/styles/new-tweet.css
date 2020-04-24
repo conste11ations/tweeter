@@ -51,13 +51,14 @@ button:active {
 }
 
 output {
-  float: right;
   padding: 10px 20px 20px;
 }
 
 footer {
   height: 40px;
   text-align: left;
+  display: flex;
+  justify-content: space-between;
 }
 
 .error-message {

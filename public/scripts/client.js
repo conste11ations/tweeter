@@ -15,11 +15,17 @@ $(document).ready(function () {
     const $dateString = new Date(tweetData.created_at * 1000).toUTCString();
 
     const $articleTweet = $(`<article class="tweet"></article>`);
-    const $avatar = $(`<img name="image" alt="No image loaded" src="${tweetData.user.avatars}"></img>`);
+    const $avatar = $(`<img name="main-avatar" alt="No image loaded" src="${tweetData.user.avatars}"></img>`);
     const $headerSection = $(`<header>${$avatar[0].outerHTML} <h4>${tweetData.user.name}</h4> <h3>${tweetData.user.handle}</h3></header>`);
+    
     // text() helps us get rid of XSS!
     const $tweetString = $('<textarea name="text" id="tweet-text" disabled="disabled">').text(`${tweetData.content.text}`);
-    const $footerSection = $(`<footer>${$dateString}</footer>`);
+
+    const $imgFlag =  $(`<img name="flag-icon" alt="No flag image" src="/images/flag-icon.png"></img>`);
+    const $imgRetweet =  $(`<img name="flag-icon" alt="No flag image" src="/images/retweet-icon.png"></img>`);
+    const $imgHeart =  $(`<img name="flag-icon" alt="No flag image" src="/images/heart-icon.png"></img>`);
+
+    const $footerSection = $(`<footer>${$dateString} <div class="icons">${$imgFlag[0].outerHTML} ${$imgRetweet[0].outerHTML} ${$imgHeart[0].outerHTML}</div></footer>`);
     // Notes: every other constant is directly appending to articleTweet which is why there is only one level of nesting
     // This is also safer because this prevents script injection (appends <script></script> as a string)
     return $articleTweet.append($headerSection).append($tweetString).append($footerSection);
@@ -32,19 +38,11 @@ $(document).ready(function () {
     });
   };
 
-  $('button#new-tweet').click(function () {
-
-    $('section.new-tweet').slideToggle("slow");
-    $('section.new-tweet textarea').focus();
-
-  });
-
-
-  // Note this is not wrapped around a constant because 
+  // Note these functions are not wrapped around a constant because 
   // you want this to constantly listen and act upon form submission
   // E.g. const postTweetListener = (tweet) => {
 
-  $("form").submit(function (event) {
+  $('form').submit(function (event) {
     let $errorMessage = "";
     event.preventDefault();
     $('div.error-message').remove();
@@ -75,6 +73,13 @@ $(document).ready(function () {
         .catch((error) => console.warn('error occured on posting tweet'));
     }
   });
+
+  $('button#new-tweet').click(function () {
+
+    $('section.new-tweet').slideToggle('slow');
+    $('section.new-tweet textarea').focus();
+  });
+
 
   const loadTweets = function () {
     $.ajax({
