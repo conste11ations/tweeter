@@ -17,7 +17,7 @@ $(document).ready(function () {
     const $articleTweet = $(`<article class="tweet"></article>`);
     const $avatar = $(`<img name="image" alt="No image loaded" src="${tweetData.user.avatars}"></img>`);
     const $headerSection = $(`<header>${$avatar[0].outerHTML} <h4>${tweetData.user.name}</h4> <h3>${tweetData.user.handle}</h3></header>`);
-    // text() helps us get rid of XSS
+    // text() helps us get rid of XSS!
     const $tweetString = $('<textarea name="text" id="tweet-text" disabled="disabled">').text(`${tweetData.content.text}`);
     const $footerSection = $(`<footer>${$dateString}</footer>`);
     // Notes: every other constant is directly appending to articleTweet which is why there is only one level of nesting
@@ -26,17 +26,24 @@ $(document).ready(function () {
   };
 
   const renderTweets = function (tweets) {
-    // loops through tweets
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
+
     $.each(tweets, function (index, value) {
       $('section.tweet-list').prepend(createTweetElement(value));
     });
   };
+
+  $('button#new-tweet').click(function () {
+
+    $('section.new-tweet').slideToggle("slow");
+    $('section.new-tweet textarea').focus();
+
+  });
+
+
   // Note this is not wrapped around a constant because 
   // you want this to constantly listen and act upon form submission
+  // E.g. const postTweetListener = (tweet) => {
 
-  // const postTweetListener = (tweet) => {
   $("form").submit(function (event) {
     let $errorMessage = "";
     event.preventDefault();
@@ -68,7 +75,6 @@ $(document).ready(function () {
         .catch((error) => console.warn('error occured on posting tweet'));
     }
   });
-  // };
 
   const loadTweets = function () {
     $.ajax({

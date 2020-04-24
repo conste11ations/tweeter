@@ -24,13 +24,14 @@
 
   <!-- App JS -->
   <script src="/scripts/client.js"></script>
+  <script src="/scripts/composer-char-counter.js"></script>
 </head>
 
 <body>
   <!-- Top nav bar (fixed) -->
   <nav class="navbar navbar-dark bg-dark fixed-top">
     <span>tweeter</span>
-    <span>Write a new tweet</span>
+    <span><button type="button" id="new-tweet">Write a new tweet</button></span>
   </nav>
 
   <header>
@@ -46,7 +47,7 @@
 
   <!-- Page-specific (main) content here -->
   <main class="container">
-    <section class="new-tweet">
+    <section class="new-tweet" style="display: none;">
       <h2>Compose Tweet</h2>
       <form id="submitNewTweet" action="/tweets" method="POST">
         <label for="tweet-text">What are you humming about?</label>
@@ -60,7 +61,6 @@
     <section class="tweet-list">
     </section>
   </main>
-  <script src="/scripts/composer-char-counter.js"></script>
 </body>
 
 </html>

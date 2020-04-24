@@ -36,6 +36,16 @@ span {
   font-family: 'Bungee', sans-serif;
 }
 
+.arrow {
+  text-align: center;
+  margin: 8% 0;
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
 @media only screen and (min-width: 768px) {
 
   .bg-dark {
