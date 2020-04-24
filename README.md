@@ -1,6 +1,6 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a simple, single-page Twitter clone. Features include: responsive design for diverse devices, funky google fonts, animated error messages based on tweet length validation, dynamically generated user information (for display purposes), slide toggling for the create tweet form. 
 
 Built with: 
   - (front-end) HTML, CSS (flexbox, media queries), JS, jQuery, AJAX, MomentJS
