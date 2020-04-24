@@ -8,7 +8,7 @@ body > header {
   align-items: center;
   margin-top: 120px;
   padding: 0px;
-  background-color: peachpuff;
+  background-color: palevioletred;
 }
 
 .centered-element {
@@ -17,6 +17,26 @@ body > header {
 
 .name-box {
   font-family: 'Bungee Shade', sans-serif;
+  color: #ffffff;
   text-align: center;
   padding: 0px;
+}
+
+@media only screen and (min-width: 768px) {
+
+  body > header {
+    width: 30%;
+    border: solid;
+    margin-top: 200px;
+    padding-top: 0px;
+    margin-left: 30px;
+  }
+
+  .centered-element {
+    border: solid;
+  }
+
+  .name-box {
+    border: solid;
+  }
 }

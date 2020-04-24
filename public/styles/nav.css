@@ -28,10 +28,18 @@ nav {
 }
 
 .bg-dark {
-  background-color: #4056A1;
+  background-color: palevioletred;
   color: #ffffff;
 }
 
 span {
   font-family: 'Bungee', sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .bg-dark {
+    background-color: #4056A1;
+  }
+
 }
