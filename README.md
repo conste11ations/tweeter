@@ -6,8 +6,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-![TinyApp Login page screenshot](./docs/login-tinyapp.png?raw=true "TinyApp Login")
-![TinyApp URLs page screenshot](./docs/urls-tinyapp.png?raw=true "TinyApp URLs")
+![Tweeter desktop version screenshot](./docs/desktop-version.png?raw=true "Tweeter desktop version")
+![Tweeter mobile version screenshot](./docs/mobile.png?raw=true "Tweeter mobile version ")
+![Tweeter error message screenshot](./docs/error-msg.png?raw=true "Tweeter error message tweet ")
 
 ## Dependencies
 
