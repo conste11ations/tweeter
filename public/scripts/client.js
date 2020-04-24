@@ -3,6 +3,8 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+//external JS lib for parsing relative time (e.g. '5 seconds ago')
+
 $(document).ready(function () {
 
   const createTweetElement = function (tweetData) {
@@ -12,7 +14,8 @@ $(document).ready(function () {
     //      <header>${tweet.user.name}</header>
     //       ////.....
     //  </article>
-    const $dateString = new Date(tweetData.created_at * 1000).toUTCString();
+    //const $dateString = new Date(tweetData.created_at * 1000).toUTCString();
+    const $dateString = moment(tweetData.created_at).fromNow();
 
     const $articleTweet = $(`<article class="tweet"></article>`);
     const $avatar = $(`<img name="main-avatar" alt="No image loaded" src="${tweetData.user.avatars}"></img>`);
