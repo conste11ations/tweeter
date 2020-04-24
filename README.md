@@ -4,14 +4,25 @@ Tweeter is a simple, single-page Twitter clone.
 
 This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
 
-## Getting Started
+## Final Product
 
-1. Fork this repository, then clone your fork of this repository.
-2. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+![TinyApp Login page screenshot](./docs/login-tinyapp.png?raw=true "TinyApp Login")
+![TinyApp URLs page screenshot](./docs/urls-tinyapp.png?raw=true "TinyApp URLs")
 
 ## Dependencies
 
-- Express
-- Node 5.10.x or above
+    "body-parser": "^1.15.2",
+    "chance": "^1.0.2",
+    "express": "^4.13.4",
+    "md5": "^2.1.0"
+
+### Note the following JS libraries sourced externally on browser side.
+ - JQuery 3.4.1 https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
+ - MomentJS for relative timestamps https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js>
+
+
+## Getting Started
+
+- Install all dependencies (using the `npm install` command).
+- Start up the web server using the `npm run local` command - the app will be served at <http://localhost:8080/>.
+- Go to <http://localhost:8080/> in your browser.
