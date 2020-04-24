@@ -8,7 +8,7 @@ Built with:
 
 ## Final Product
 
-![Tweeter desktop version screenshot](./docs/desktop-version.png?raw=true "Tweeter desktop version")
+![Tweeter desktop version screenshot](./docs/desktop-screen.png?raw=true "Tweeter desktop version")
 ![Tweeter mobile version screenshot](./docs/mobile.png?raw=true "Tweeter mobile version ")
 ![Tweeter error message screenshot](./docs/error-msg.png?raw=true "Tweeter error message tweet ")
 
