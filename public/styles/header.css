@@ -17,8 +17,8 @@ body > header {
 
 .name-box {
   font-family: 'Bungee Shade', sans-serif;
-  color: #ffffff;
   text-align: center;
+  color: #ffffff;
   padding: 0px;
 }
 
@@ -26,17 +26,17 @@ body > header {
 
   body > header {
     width: 30%;
-    border: solid;
     margin-top: 200px;
-    padding-top: 0px;
     margin-left: 30px;
   }
 
   .centered-element {
-    border: solid;
+    margin-top: 40px;
+
   }
 
   .name-box {
-    border: solid;
+    margin-top: -50px;
   }
+
 }
