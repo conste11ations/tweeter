@@ -13,13 +13,13 @@ $(document).ready(function () {
     const $avatar = $(`<img name="main-avatar" alt="No image loaded" src="${tweetData.user.avatars}"></img>`);
     const $headerSection = $(`<header>${$avatar[0].outerHTML} <h4>${tweetData.user.name}</h4> <h3>${tweetData.user.handle}</h3></header>`);
 
-    const $tweetString = $('<textarea name="text" id="tweet-text" disabled="disabled">').text(`${tweetData.content.text}`);
+    const $escapedTweetString = $('<textarea name="text" id="tweet-text" disabled="disabled">').text(`${tweetData.content.text}`);
     const $imgFlag = $(`<img name="flag-icon" alt="No flag image" src="/images/flag-icon.png"></img>`);
     const $imgRetweet = $(`<img name="flag-icon" alt="No flag image" src="/images/retweet-icon.png"></img>`);
     const $imgHeart = $(`<img name="flag-icon" alt="No flag image" src="/images/heart-icon.png"></img>`);
     const $footerSection = $(`<footer>${$dateString} <div class="icons">${$imgFlag[0].outerHTML} ${$imgRetweet[0].outerHTML} ${$imgHeart[0].outerHTML}</div></footer>`);
 
-    return $articleTweet.append($headerSection).append($tweetString).append($footerSection);
+    return $articleTweet.append($headerSection).append($escapedTweetString).append($footerSection);
   };
 
   const renderTweets = function (tweets) {
