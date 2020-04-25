@@ -11,6 +11,10 @@ article:hover {
   font-weight: bold;
 }
 
+article:hover img {
+  visibility: visible;
+}
+
 article > header {
   height: 70px;
 }
@@ -34,4 +38,7 @@ header > h4 {
 footer > div > img {
   height: 30px;
   width: 30px;
+  visibility: hidden;
 }
+
+

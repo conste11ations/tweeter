@@ -3,34 +3,22 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-//external JS lib for parsing relative time (e.g. '5 seconds ago')
 
 $(document).ready(function () {
 
   const createTweetElement = function (tweetData) {
-    // Possible alternate implementation
-    //     const $articleTweet = `<article class="tweet">
-    //     <img name src=${tweetData.user.avatars}/>
-    //      <header>${tweet.user.name}</header>
-    //       ////.....
-    //  </article>
-    //const $dateString = new Date(tweetData.created_at * 1000).toUTCString();
-    const $dateString = moment(tweetData.created_at).fromNow();
 
+    const $dateString = moment(tweetData.created_at).fromNow();
     const $articleTweet = $(`<article class="tweet"></article>`);
     const $avatar = $(`<img name="main-avatar" alt="No image loaded" src="${tweetData.user.avatars}"></img>`);
     const $headerSection = $(`<header>${$avatar[0].outerHTML} <h4>${tweetData.user.name}</h4> <h3>${tweetData.user.handle}</h3></header>`);
-    
-    // text() helps us get rid of XSS!
+
     const $tweetString = $('<textarea name="text" id="tweet-text" disabled="disabled">').text(`${tweetData.content.text}`);
-
-    const $imgFlag =  $(`<img name="flag-icon" alt="No flag image" src="/images/flag-icon.png"></img>`);
-    const $imgRetweet =  $(`<img name="flag-icon" alt="No flag image" src="/images/retweet-icon.png"></img>`);
-    const $imgHeart =  $(`<img name="flag-icon" alt="No flag image" src="/images/heart-icon.png"></img>`);
-
+    const $imgFlag = $(`<img name="flag-icon" alt="No flag image" src="/images/flag-icon.png"></img>`);
+    const $imgRetweet = $(`<img name="flag-icon" alt="No flag image" src="/images/retweet-icon.png"></img>`);
+    const $imgHeart = $(`<img name="flag-icon" alt="No flag image" src="/images/heart-icon.png"></img>`);
     const $footerSection = $(`<footer>${$dateString} <div class="icons">${$imgFlag[0].outerHTML} ${$imgRetweet[0].outerHTML} ${$imgHeart[0].outerHTML}</div></footer>`);
-    // Notes: every other constant is directly appending to articleTweet which is why there is only one level of nesting
-    // This is also safer because this prevents script injection (appends <script></script> as a string)
+
     return $articleTweet.append($headerSection).append($tweetString).append($footerSection);
   };
 
@@ -41,9 +29,7 @@ $(document).ready(function () {
     });
   };
 
-  // Note these functions are not wrapped around a constant because 
-  // you want this to constantly listen and act upon form submission
-  // E.g. const postTweetListener = (tweet) => {
+  // function to display errors to help user validate tweet 
 
   $('form').submit(function (event) {
     let $errorMessage = "";
@@ -72,7 +58,6 @@ $(document).ready(function () {
         .then((response) => {
           location.reload();
         })
-        // Learned that blindly console.wan(error) is a security risk as there's a lot of info in the default error obj
         .catch((error) => console.warn('error occured on posting tweet'));
     }
   });
@@ -82,7 +67,6 @@ $(document).ready(function () {
     $('section.new-tweet').slideToggle('slow');
     $('section.new-tweet textarea').focus();
   });
-
 
   const loadTweets = function () {
     $.ajax({
