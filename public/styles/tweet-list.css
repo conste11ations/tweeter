@@ -15,6 +15,10 @@ article:hover img {
   visibility: visible;
 }
 
+article:hover h3 {
+  visibility: visible;
+}
+
 article > header {
   height: 70px;
 }
@@ -27,6 +31,7 @@ header > h3 {
   float: right;
   color: silver;
   margin-top: 20px;
+  visibility: hidden;
 }
 
 header > h4 {
